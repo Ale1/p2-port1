@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>  Create a new post! </h1>
+  <form action='/posts/new' method='post'>
+    <input type='hidden' name='post_id' value=<%@post_id%>>
+    <input type='text' name='my_title' value='Title goes here'><br><br>
+    <input type='text' name='my_content' placeholder='Content goes here'><br><br>
+    <input type='submit' value='create new'> 
+  </form>
+  <form action='/posts' method='get'><br>
+   <input type='submit' value='cancel'>
+  </form>
+
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+  <h1> Edit this post </h1>
+  <h2> (woah! you are a power user) </h2>
+  
+  <u>Title:</u>   <%= @my_post.title %><br>
+  <u>Content:</u>   <%=@my_post.content %><br><br>
+
+
+  <form action='/posts/edit' method='post'>
+    <Select name='my_field'>
+      <option>title</option>
+      <option>content</option> </select>
+    <br><br>
+    <input type='hidden' name='post_id' value= <%= params[:post_id] %> >
+    <input type='text' name='replacement' placeholder='change to this'><br><br>
+    <input type='submit' value='confirm edit'> 
+  </form>
+  <form action='/posts' method='get'><br>
+   <input type='submit' value='cancel'>
+  </form>
+
+</div>
+ 

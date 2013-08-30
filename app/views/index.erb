@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Welcome to... <br> THE BEST SITE IN THE UNIVERSE!</h2>
+  <p>Hello, world!</p>
+
+<ul>
+<% @posts.each do |note| %>
+<li><%=note.id%> - <%= note.title %> :
+<%= note.content %> </li>
+<% end %>
+</ul>
+
+
+<form action='posts/new'>
+<input type='submit' value='add post' method='GET'>
+</form> <br>
+
+<form action='posts/edit' method = 'GET'>
+<input type='submit' value='edit post'> <input type='text' name='post_id' placeholder=' post number' size= 8>
+</form> <br>
+
+<form action='posts/delete' method = 'GET'>
+<input type='submit' value='delete post'> <input type='text' name='post_id' placeholder=' post number' size= 8>
+</form> <br>
+
+</div>
